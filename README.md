@@ -104,13 +104,3 @@ You may not:
 
 [![Website](https://img.shields.io/badge/Website-nickdwtyay.com.br-blue)](https://nickdwtyay.com.br)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Nicássio_Guimarães-blue)](https://il.linkedin.com/in/nic%C3%A1ssio-guimar%C3%A3es-b0660223b)
-```
-
-### Key Features:
-1. **Visual Badges** - Version/platform indicators
-2. **Clean Syntax Highlighting** - Properly formatted code blocks
-3. **Comparison Table** - Clear technical breakdown
-4. **Anticipated FAQs** - Reduces support requests
-5. **Brand Consistency** - Proper "Nick Dwtyay" naming
-6. **Actionable CTAs** - Direct download/usage instructions
-

@@ -1,8 +1,8 @@
 @echo off
-title Full Network Reset Nicassio Guimaraes v2.2 MIT License 2.0, Nick Dwtyay, Ltd.
+title Full Network Reset Tool by Nicassio Guimaraes v2.2 - MIT License
 cls
 
-:: Check if running as administrator
+:: Check for admin privileges
 net session >nul 2>&1
 if %errorLevel% neq 0 (
     echo Please run this script as Administrator!
@@ -11,57 +11,56 @@ if %errorLevel% neq 0 (
 )
 
 echo ########################################################
-echo #               FULL NETWORK RESET                    #
-echo #                                                    #
-echo # This script will run a series of commands to       #
-echo # reset your computer's network settings             #
+echo #               COMPLETE NETWORK RESET TOOL           #
+echo #                                                     #
+echo # This script will execute a series of commands to    #
+echo # reset the network configuration on your computer.   #
 echo ########################################################
 echo.
 echo Execution date: %date% %time%
 echo.
 
-echo Saving network information to reset_network.log...
-ipconfig /all > reset_network.log
+echo Saving network information to reset_de_rede.log...
+ipconfig /all > reset_de_rede.log
 
 echo Running ipconfig /release...
-ipconfig /release >> reset_network.log
+ipconfig /release >> reset_de_rede.log
 timeout /t 5 /nobreak >nul
 
 echo Running ipconfig /flushdns...
-ipconfig /flushdns >> reset_network.log
+ipconfig /flushdns >> reset_de_rede.log
 timeout /t 5 /nobreak >nul
 
 echo Running ipconfig /renew...
-ipconfig /renew >> reset_network.log
+ipconfig /renew >> reset_de_rede.log
 timeout /t 10 /nobreak >nul
 
 echo Running ipconfig /registerdns...
-ipconfig /registerdns >> reset_network.log
+ipconfig /registerdns >> reset_de_rede.log
 timeout /t 5 /nobreak >nul
 
 echo Running netsh int ipv4 reset...
-netsh int ipv4 reset >> reset_network.log
+netsh int ipv4 reset >> reset_de_rede.log
 timeout /t 5 /nobreak >nul
 
 echo Running netsh int ipv6 reset...
-netsh int ipv6 reset >> reset_network.log
+netsh int ipv6 reset >> reset_de_rede.log
 timeout /t 5 /nobreak >nul
 
 echo Running netsh int tcp reset...
-netsh int tcp reset >> reset_network.log
+netsh int tcp reset >> reset_de_rede.log
 timeout /t 5 /nobreak >nul
 
 echo Running netsh winsock reset...
-netsh winsock reset >> reset_network.log
+netsh winsock reset >> reset_de_rede.log
 timeout /t 5 /nobreak >nul
 
 echo.
 echo ########################################################
-echo All operations were completed successfully!
+echo All operations completed successfully!
 echo.
-echo A file named reset_network.log was created with the details.
+echo A log file (reset_de_rede.log) has been created with details.
 echo.
-echo RECOMMENDATION: Restart your computer so all changes
-echo take full effect.
+echo RECOMMENDATION: Restart your computer for all changes to take full effect.
 echo ########################################################
 pause
